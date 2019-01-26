@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Creator;
-use App\Game;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 

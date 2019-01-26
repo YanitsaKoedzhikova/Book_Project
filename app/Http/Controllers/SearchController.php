@@ -1,31 +1,33 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Creator;
+use App\Game;
 use Illuminate\Http\Request;
+use App\Genre;
+use Illuminate\Support\Facades\Input;
 
 class SearchController extends Controller
 {
     public function searchGames(){
-    $q = Input::get('q');
-    $game = House::where('gamesName','LIKE','%'.$q.'%')->get();
-    if(count($game)>0)
-        return view('games.search')->withDetails($game)->withQuery($q);
-    else return view('games.search')->withMessage('No detail found. Try to search again!');
+        $search = Input::get ( 'search' );
+        $game = Game::where('GameName','LIKE','%'.$search.'%')->get();
+        if(count($game) > 0)
+            return view('games.search')->withDetails($game)->withQuery ( $search );
+        else return view('games.search')->withMessage('There are no games with that name.You can try again! ');
     }
     public function searchCreators(){
-        $q = Input::get('q');
-        $creator = House::where('creatorName','LIKE','%'.$q.'%')->get();
-        if(count($creator)>0)
-            return view('creator.search')->withDetails($creator)->withQuery($q);
-        else return view('creator.search')->withMessage('No detail found. Try to search again!');
+        $search = Input::get ( 'search' );
+        $creator = Creator::where('creatorName','LIKE','%'.$search.'%')->get();
+        if(count($creator) > 0)
+            return view('creators.search')->withDetails($creator)->withQuery ( $search );
+        else return view('creators.search')->withMessage('There are no creators with that name.You can try again! ');
     }
-
     public function searchGenres(){
-        $q = Input::get('q');
-        $type = genre::where('genreType','LIKE','%'.$q.'%')->get();
-        if(count($type)>0)
-            return view('genres.search')->withDetails($type)->withQuery($q);
-        else return view('genres.search')->withMessage('No detail found. Try to search again!');
+        $search = Input::get ( 'search' );
+        $genre = Genre::where('GenreName','LIKE','%'.$search.'%')->get();
+        if(count($genre) > 0)
+            return view('genres.search')->withDetails($genre)->withQuery ( $search );
+        else return view('genres.search')->withMessage('There are no genres with that name.You can try again! ');
     }
 }
+
