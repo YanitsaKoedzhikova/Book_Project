@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('contend')
-
-<!doctype html>
+@section('content')
+        <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -79,7 +78,7 @@
 <table class="table-bordered">
     <thead class="thead-dark">
     <tr>
-        <th>ID</th>
+
         <th>GameName</th>
         <th>ReleaseDate</th>
         <th>Creator</th>
@@ -89,7 +88,7 @@
     <tbody>
     @foreach($allGames as $key => $value)
         <tr>
-            <td>{{$value->id}}</td>
+
             <td>{{$value->GameName}}</td>
             <td>{{$value->ReleaseDate}}</td>
             <td>{{$value->Creator}}</td>
@@ -109,14 +108,11 @@
             </td>
 
         </tr>
-
     @endforeach
-
     </tbody>
-
 </table>
 
 </body>
-
 </html>
+@endsection
 
