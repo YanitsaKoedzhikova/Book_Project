@@ -51,10 +51,8 @@
     </style>
 </head>
 <body>
-<h1>INDEX</h1>
-<div class="panel-heading">
-    <a class="btn btn-small btn-info" href="{{ URL::to('creators/create') }}">Create a Creator</a>
-</div>
+<h1 style= " text-align: center" >Creators</h1>
+
 <br>
 <form action="{{action("SearchController@searchCreators")}}" method="POST" role="search">
     {{ csrf_field() }}
@@ -68,12 +66,8 @@
     </div>
 </form>
 <br>
-<td>
-    @if (Auth::check())
-        <a class="btn btn-small btn-info" href="{{ URL::to('images') }}"> <span>Images</span></a>
-    @endif
-</td>
-<table class="table-bordered">
+
+<table class="table table-bordered table-hover">
     <thead class="thead-dark">
     <tr>
         <th>ID</th>
@@ -107,6 +101,9 @@
     @endforeach
     </tbody>
 </table>
+<div class="panel-heading">
+    <a class="btn btn-small btn-info" href="{{ URL::to('creators/create') }}">Create a Creator</a>
+</div>
 
 </body>
 </html>

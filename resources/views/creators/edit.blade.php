@@ -20,25 +20,6 @@
             margin: 0;
         }
 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
 
         .links > a {
             padding: 0 25px;
@@ -82,7 +63,7 @@
 
         <div class="form-group row">
             <div class="col-md-2"></div>
-            <button type="submit" class="btn-outline-dark">Update</button>
+            <button type="submit" class="btn btn-small btn-info">Update</button>
         </div>
     </form>
 </div>

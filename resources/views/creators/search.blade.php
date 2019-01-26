@@ -19,22 +19,8 @@
             height: 100vh;
             margin: 0;
         }
-        .full-height {
-            height: 100vh;
-        }
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-        .position-ref {
-            position: relative;
-        }
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
+
+
         .links > a {
             padding: 0 25px;
             font-size: 13px;
@@ -48,9 +34,9 @@
 <body>
 <div class="container">
     @if(isset($details))
-        <p style="font-size: 25px;" class="text-center"> Results for <b> {{ $query }} </b> are :</p>
+        <p style="font-size: 25px; text-align: center;"> All creator with name  <b> {{ $query }} </b> are :</p>
         <h2>Creators</h2>
-        <table class="table table-striped">
+        <table class="table table-bordered table-hover">
             <thead>
             <tr>
                 <th>Creator Name</th>
@@ -70,7 +56,18 @@
         </table>
 </div>
 @elseif(isset($message))
-    <h1>{{$message}}</h1>
+    <h1 style= " text-align: center">{{$message}}</h1>
+    <form action="{{action("SearchController@searchGames")}}" method="POST" role="search">
+        {{ csrf_field() }}
+        <div class="input-group">
+            <input type="text" class="form-control" name="search"
+                   placeholder="Search a game"> <span class="input-group-btn">
+            <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search">Search</span>
+            </button>
+        </span>
+        </div>
+    </form>
 @endif
 <div class="form-group row">
     <div class="col-xl-1"></div>

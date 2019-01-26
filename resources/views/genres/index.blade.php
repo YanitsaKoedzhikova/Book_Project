@@ -20,25 +20,6 @@
             margin: 0;
         }
 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
 
         .links > a {
             padding: 0 25px;
@@ -51,10 +32,8 @@
     </style>
 </head>
 <body>
-<h1>INDEX</h1>
-<div class="panel-heading">
-    <a class="btn btn-small btn-info" href="{{ URL::to('genres/create') }}">Create a Genre</a>
-</div>
+<h1 style= " text-align: center" >Genres</h1>
+
 <br>
 <form action="{{action("SearchController@searchGenres")}}" method="POST" role="search">
     {{ csrf_field() }}
@@ -68,16 +47,13 @@
     </div>
 </form>
 <br>
-<td>
-    @if (Auth::check())
-        <a class="btn btn-small btn-info" href="{{ URL::to('images') }}"> <span>Images</span></a>
-    @endif
-</td>
-<table class="table-bordered">
+
+<table class="table table-bordered table-hover">
     <thead class="thead-dark">
     <tr>
         <th>ID</th>
         <th>Genre Name</th>
+        <th colspan="4">Actions</th>
 
     </tr>
     </thead>
@@ -86,6 +62,7 @@
         <tr>
             <td>{{$value->id}}</td>
             <td>{{$value->GenreName}}</td>
+
 
             <td>
                 <a class="btn btn-primary btn-red" href="{{ route('genres.show', $value->id) }}" method="POST">Show</a>
@@ -105,7 +82,9 @@
     @endforeach
     </tbody>
 </table>
-
+<div class="panel-heading">
+    <a class="btn btn-small btn-info" href="{{ URL::to('genres/create') }}">Create a Genre</a>
+</div>
 </body>
 </html>
 @endsection

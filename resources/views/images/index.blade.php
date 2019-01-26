@@ -16,13 +16,13 @@
                             <div class="alert alert-info">{{\Session::get('success') }}</div>
                         @endif
 
-                        <table class="table table-striped table-bordered">
+                        <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
                                 <td>ID</td>
                                 <td>Name</td>
                                 <td>Image</td>
-                                <td>Actions</td>
+                                <th>Actions</th>
                             </tr>
                             </thead>
                             <tbody>

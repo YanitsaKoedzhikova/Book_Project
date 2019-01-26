@@ -38,7 +38,7 @@
 
         <div class="form-group row">
             <div class="col-md-2"></div>
-            <button type="submit" class="btn-outline-dark">Update</button>
+            <button type="submit" class="btn btn-small btn-info">Update</button>
         </div>
     </form>
 </div>

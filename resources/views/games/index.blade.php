@@ -22,25 +22,6 @@
 
         }
 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
 
         .links > a {
             padding: 0 25px;
@@ -54,10 +35,8 @@
     </style>
 </head>
 <body>
-<h1>INDEX</h1>
-<div class="panel-heading">
-    <a class="btn btn-small btn-info" href="{{ URL::to('games/create') }}">Create a Game</a>
-</div>
+<h1 style= " text-align: center" >The games we love</h1>
+
 <br>
 <form action="{{action("SearchController@searchGames")}}" method="POST" role="search">
     {{ csrf_field() }}
@@ -71,12 +50,8 @@
     </div>
 </form>
 <br>
-<td>
-    @if (Auth::check())
-        <a class="btn btn-small btn-info" href="{{ URL::to('images') }}"> <span>Images</span></a>
-    @endif
-</td>
-<table class="table-bordered">
+
+<table class="table table-bordered table-hover">
     <thead class="thead-dark">
     <tr>
 
@@ -84,6 +59,7 @@
         <th>ReleaseDate</th>
         <th>Creator</th>
         <th>Genre</th>
+        <th colspan="4">Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -112,7 +88,9 @@
     @endforeach
     </tbody>
 </table>
-
+<div class="panel-heading">
+    <a class="btn btn-small btn-info" href="{{ URL::to('games/create') }}">Create a Game</a>
+</div>
 </body>
 </html>
 @endsection
