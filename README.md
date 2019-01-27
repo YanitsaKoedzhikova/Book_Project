@@ -2,7 +2,7 @@ Games System
 
 University PHP Frameworks - Laravel project
 
-The site is about games. Here players who dont know what to play can search for a new good game.They can see the game,genre of it and creator who make the game.In the site also have a page, where can put a images of different games. The start up page have a menu with Games, Creators, Genres and Images.
+The site is about games. Here players who dont know what to play can search for a new good game.It have a page with all games where games have decsription,creator,genre and release date.It can be searched by game name.Site have also pages about Creators of the games and genres.It can be surched by Creator name and Genre name. If player dont know what is the genre of the game he liked in first page, here where are all genres he can see the description..In the site also have a page, where can put a images of different games. The start up page have a menu with Games, Creators, Genres and Images.At all time it is possible to go back to star up page, by button at the bottom of the page, ot just clik on laravel on navbar.People who make registration can update, create and delete games,creators and genres, in other way they can only see the information.
 
 
 
@@ -31,18 +31,21 @@ II.Models are:
             -ReleaseDat
             -Creator
             -Genre
+            -Description
 	    
 	    
     2.Creators:
         --filds to fill in:
             -Creator Name
             -Creating Company
+            -Description
 	    
 	    
 	    
     3.Genre:
         --filds to fill in:
             -GenreName
+            -Description
 	    
 	    
     4.Image:
