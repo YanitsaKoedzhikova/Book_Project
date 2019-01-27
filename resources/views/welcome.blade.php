@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #9999ff;
+                background-color: #e2e9de;
                 color: #000000;
                 font-family: Gabriola;
                 font-weight: 200;

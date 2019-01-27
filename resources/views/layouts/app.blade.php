@@ -38,6 +38,18 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('games.index') }}">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('creators.index') }}">Creators</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('genres.index') }}">Genres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('images.index') }}">Images</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
