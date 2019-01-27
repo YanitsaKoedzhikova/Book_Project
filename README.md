@@ -9,15 +9,15 @@ The site is about games. Here players who dont know what to play can search for 
 
 
 
-I. Controllers are
+I. Controllers are:
 
-    Game Controller    
-    Creator Controlle
-    Genre Controller
-    Image Controller
-    Search Controller
-    Controller
-    Home Controller
+    1.Game Controller    
+    2.Creator Controlle
+    3.Genre Controller
+    4.Image Controller
+    5.Search Controller
+    6.Controller
+    7.Home Controller
 
 
 
