@@ -47,11 +47,10 @@
         <div class="form-group row">
             <div class="col-md-2"></div>
             <button type="submit" class="btn btn-small btn-info">Update</button>
-            <a class="btn btn-primary" href="{{ route('genre.index') }}"> Back</a>
+            <a class="btn btn-primary" href="{{ route('genres.index') }}"> Back</a>
         </div>
     </form>
 </div>
-
 
 </body>
 </html>

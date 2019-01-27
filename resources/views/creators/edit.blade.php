@@ -69,7 +69,7 @@
         </div>
 
         <div class="form-group row">
-
+            <div class="col-md-2"></div>
             <button type="submit" class="btn btn-small btn-info">Update</button>
             <div class="col-md-2"></div>
             <a class="btn btn-primary" href="{{ route('creators.index') }}"> Back</a>

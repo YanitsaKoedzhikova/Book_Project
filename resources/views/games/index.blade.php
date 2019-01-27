@@ -75,6 +75,7 @@
             <td>
                 <a class="btn btn-primary btn-red" href="{{ route('games.show', $value->id) }}" method="POST">Show</a>
             </td>
+            @if (Auth::check())
             <td>
                 <a class="btn btn-small btn-info" href="{{ URL::to('games/' . $value->id . '/edit') }}">Edit</a>
             </td>
@@ -85,18 +86,21 @@
                     <button class="btn btn-danger" type="submit">Delete</button>
                 </form>
             </td>
-
+            @endif
         </tr>
     @endforeach
     </tbody>
 </table>
+@if (Auth::check())
 <div class="panel-heading">
     <a class="btn btn-small btn-info" href="{{ URL::to('games/create') }}">Create a Game</a>
     <div class="col-md-2"></div>
+    @endif
     <a class="btn btn-small btn-info" href="{{ URL::to('http://localhost/') }}">Back</a>
 </div>
 
 </body>
 </html>
 @endsection
+
 

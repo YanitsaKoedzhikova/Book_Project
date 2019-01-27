@@ -8,6 +8,7 @@
                     <div class="panel-heading">
                         <h1 style= " text-align: center" >Images for the games we love</h1>
 
+
                     <div class="panel-body">
                         <!-- will be used to show any messages -->
                         @if (\Session::has('success'))
@@ -29,31 +30,25 @@
 
                                     <td>{{ $value->imageDescription }}</td>
                                     <td><img src="<?php echo asset('storage/sample-image/' . $value->fileName);?>" alt="image" /></td>
-                                    <!-- we will also add show, edit, and delete buttons -->
 
+                                    @if (Auth::check())
                                     <td>
-                                        <a class="btn btn-primary btn-red" href="{{ route('images.show', $value->id) }}" method="POST">Show</a>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-small btn-info" href="{{ URL::to('images/' . $value->id . '/edit') }}">Edit</a>
-                                    </td>
-
-                                    <td>
-
                                         <form action="{{action('ImageController@destroy', $value->id )}}" method="post">
                                             {{csrf_field()}}
                                             <input name="_method" type="hidden" value="DELETE">
                                             <button class="btn btn-danger" type="submit">Delete</button>
                                         </form>
-
                                     </td>
+                                    @endif
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
+                        @if (Auth::check())
                         <div class="panel-heading">
                             <a class="btn btn-small btn-info" href="{{ URL::to('images/create') }}" >Add Image</a>
                         </div>
+                        @endif
                     </div>
 
                         <div class="panel-heading">

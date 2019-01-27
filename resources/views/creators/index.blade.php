@@ -88,6 +88,7 @@
             <td>
                 <a class="btn btn-primary btn-red" href="{{ route('creators.show', $value->id) }}" method="POST">Show</a>
             </td>
+            @if (Auth::check())
             <td>
                 <a class="btn btn-small btn-info" href="{{ URL::to('creators/' . $value->id . '/edit') }}">Edit</a>
             </td>
@@ -98,15 +99,17 @@
                     <button class="btn btn-danger" type="submit">Delete</button>
                 </form>
             </td>
-
+            @endif
         </tr>
     @endforeach
     </tbody>
 </table>
 <div class="panel-heading">
+    @if (Auth::check())
     <div class="col-md-2"></div>
     <a class="btn btn-small btn-info" href="{{ URL::to('creators/create') }}">Create a Creator</a>
     <div class="col-md-2"></div>
+    @endif
     <a class="btn btn-small btn-info" href="{{ URL::to('http://localhost/') }}">Back</a>
 </div>
 
