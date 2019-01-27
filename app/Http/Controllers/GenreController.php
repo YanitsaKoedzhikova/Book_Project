@@ -26,6 +26,7 @@ class GenreController extends Controller
     {
         $rules = array (
             'GenreName' => 'bail||required|min:3|max:150',
+            'Description' =>  'bail||required|min:3|max:350',
 
         );
 
@@ -36,6 +37,7 @@ class GenreController extends Controller
         } else {
             $genre = new Genre([
                 'GenreName' => $request->get('GenreName' ),
+                'Description' => $request->get('Description'),
 
             ]);
             $genre->save();
@@ -60,6 +62,7 @@ class GenreController extends Controller
         $genre = Genre::find($id);
 
         $genre->GenreName = $request->get('GenreName');
+        $genre->Description = $request->get('Description');
         $genre->save();
         return redirect('genres')->with('success', 'Task was successful');
     }

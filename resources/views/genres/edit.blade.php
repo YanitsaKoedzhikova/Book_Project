@@ -35,6 +35,14 @@
                 <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" name="GenreName" value="{{$genre->GenreName}}">
             </div>
         </div>
+        <div class="form-group row">
+            {{csrf_field()}}
+            <input type="hidden" name="_method" value="PATCH">
+            <label for="firstName" class="col-sm-2 col-form-label col-form-label-lg">Description:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" name="Description" value="{{$genre->Description}}">
+            </div>
+        </div>
 
         <div class="form-group row">
             <div class="col-md-2"></div>

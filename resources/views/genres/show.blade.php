@@ -43,6 +43,14 @@
             {{ $genre->GenreName }}
         </td>
     </tr>
+    <tr>
+        <td width="20%">
+            <strong>Description:</strong>
+        </td>
+        <td>
+            {{ $game->Description}}
+        </td>
+    </tr>
 </table>
 <div class="panel-body">
     <div class="row">

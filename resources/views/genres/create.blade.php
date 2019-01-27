@@ -53,6 +53,13 @@
                 <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" placeholder="Genre name:" name="GenreName">
             </div>
         </div>
+        <div class="form-group row">
+            {{csrf_field()}}
+            <label for="genreName" class="col-sm-2 col-form-label col-form-label-lg">Description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control form-control-lg" id="lgFormGroupInput1" placeholder="Description:" name="Description">
+            </div>
+        </div>
 
         <div class="form-group row">
             <div class="col-md-2"></div>

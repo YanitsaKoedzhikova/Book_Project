@@ -51,8 +51,9 @@
 <table class="table table-bordered table-hover">
     <thead class="thead-dark">
     <tr>
-        <th>ID</th>
+
         <th>Genre Name</th>
+        <th>Description</th>
         <th colspan="4">Actions</th>
 
     </tr>
@@ -60,8 +61,9 @@
     <tbody>
     @foreach($allGenres as $key => $value)
         <tr>
-            <td>{{$value->id}}</td>
+
             <td>{{$value->GenreName}}</td>
+            <td>{{$value->Description}}</td>
 
 
             <td>

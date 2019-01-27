@@ -70,7 +70,7 @@
 <table class="table table-bordered table-hover">
     <thead class="thead-dark">
     <tr>
-        <th>ID</th>
+
         <th>Creator Name</th>
         <th>Creating Company</th>
 
@@ -80,7 +80,7 @@
     <tbody>
     @foreach($allCreators as $key => $value)
         <tr>
-            <td>{{$value->id}}</td>
+
             <td>{{$value->CreatorName}}</td>
             <td>{{$value->CreatingCompany}}</td>
             <td>
