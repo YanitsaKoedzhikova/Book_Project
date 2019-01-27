@@ -73,6 +73,7 @@
 
         <th>Creator Name</th>
         <th>Creating Company</th>
+        <th>Description</th>
 
         <th colspan="4">Actions</th>
     </tr>
@@ -83,6 +84,7 @@
 
             <td>{{$value->CreatorName}}</td>
             <td>{{$value->CreatingCompany}}</td>
+            <td>{{$value->Description}}</td>
             <td>
                 <a class="btn btn-primary btn-red" href="{{ route('creators.show', $value->id) }}" method="POST">Show</a>
             </td>
@@ -102,7 +104,10 @@
     </tbody>
 </table>
 <div class="panel-heading">
+    <div class="col-md-2"></div>
     <a class="btn btn-small btn-info" href="{{ URL::to('creators/create') }}">Create a Creator</a>
+    <div class="col-md-2"></div>
+    <a class="btn btn-small btn-info" href="{{ URL::to('http://localhost/') }}">Back</a>
 </div>
 
 </body>

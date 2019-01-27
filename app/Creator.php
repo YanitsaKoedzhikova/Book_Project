@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Creator extends Model
 {
     protected $fillable = [
-      'CreatorName', 'CreatingCompany'
+      'CreatorName', 'CreatingCompany', 'Description'
     ];
 }

@@ -19,6 +19,7 @@ class CreateGamesTable extends Migration
             $table->date('ReleaseDate');
             $table->string('Creator', '150');
             $table->string('Genre', '100');
+            $table->string('Description','350');
             $table->timestamps();
         });
     }

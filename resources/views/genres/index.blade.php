@@ -86,6 +86,8 @@
 </table>
 <div class="panel-heading">
     <a class="btn btn-small btn-info" href="{{ URL::to('genres/create') }}">Create a Genre</a>
+    <div class="col-md-2"></div>
+    <a class="btn btn-small btn-info" href="{{ URL::to('http://localhost/') }}">Back</a>
 </div>
 </body>
 </html>

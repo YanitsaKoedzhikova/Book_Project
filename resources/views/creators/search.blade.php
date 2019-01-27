@@ -41,6 +41,7 @@
             <tr>
                 <th>Creator Name</th>
                 <th>Creating Company</th>
+                <th>Description</th>
             </tr>
             </thead>
             <tbody>
@@ -48,6 +49,7 @@
                 <tr>
                     <td>{{$creator->CreatorName}}</td>
                     <td>{{$creator->CreatingCompany}}</td>
+                    <td>{{$creator->Description}}</td>
 
                 </tr>
 
@@ -57,11 +59,11 @@
 </div>
 @elseif(isset($message))
     <h1 style= " text-align: center">{{$message}}</h1>
-    <form action="{{action("SearchController@searchGames")}}" method="POST" role="search">
+    <form action="{{action("SearchController@searchCreators")}}" method="POST" role="search">
         {{ csrf_field() }}
         <div class="input-group">
             <input type="text" class="form-control" name="search"
-                   placeholder="Search a game"> <span class="input-group-btn">
+                   placeholder="Search a creator"> <span class="input-group-btn">
             <button type="submit" class="btn btn-default">
                 <span class="glyphicon glyphicon-search">Search</span>
             </button>

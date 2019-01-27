@@ -45,6 +45,10 @@
                             @endforeach
                             </tbody>
                         </table>
+                        <div class="panel-heading">
+                            <div class="col-md-2"></div>
+                            <a class="btn btn-small btn-info" href="{{ URL::to('http://localhost/') }}">Back</a>
+                        </div>
                     </div>
                 </div>
             </div>

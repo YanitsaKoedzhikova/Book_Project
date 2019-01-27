@@ -59,6 +59,7 @@
         <th>ReleaseDate</th>
         <th>Creator</th>
         <th>Genre</th>
+        <th>Description</th>
         <th colspan="4">Actions</th>
     </tr>
     </thead>
@@ -70,6 +71,7 @@
             <td>{{$value->ReleaseDate}}</td>
             <td>{{$value->Creator}}</td>
             <td>{{$value->Genre}}</td>
+            <td>{{$value->Description}}</td>
             <td>
                 <a class="btn btn-primary btn-red" href="{{ route('games.show', $value->id) }}" method="POST">Show</a>
             </td>
@@ -90,7 +92,10 @@
 </table>
 <div class="panel-heading">
     <a class="btn btn-small btn-info" href="{{ URL::to('games/create') }}">Create a Game</a>
+    <div class="col-md-2"></div>
+    <a class="btn btn-small btn-info" href="{{ URL::to('http://localhost/') }}">Back</a>
 </div>
+
 </body>
 </html>
 @endsection

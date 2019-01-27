@@ -29,7 +29,8 @@ class GameController extends Controller
             'GameName' => 'bail||required|min:3|max:150',
             'ReleaseDate'=>'required',
             'Creator'=>'required|min:3|max:150',
-            'Genre'=>'required|min:3|max:100'
+            'Genre'=>'required|min:3|max:100',
+            'Description' =>  'bail||required|min:3|max:350',
         );
 
         $validator = Validator::make($request->all(),$rules);
@@ -42,6 +43,7 @@ class GameController extends Controller
                 'ReleaseDate'=> $request->get( 'ReleaseDate'),
                 'Creator'=> $request->get('Creator'),
                 'Genre'=> $request->get('Genre'),
+                'Description' => $request->get('Description'),
 
             ]);
             $game->save();
@@ -69,6 +71,7 @@ class GameController extends Controller
         $game->ReleaseDate = $request->get('ReleaseDate');
         $game->Creator = $request->get('Creator');
         $game->Genre = $request->get('Genre');
+        $game->Description = $request->get('Description');
         $game->save();
         return redirect('games')->with('success', 'Task was successful');
     }

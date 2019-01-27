@@ -29,7 +29,8 @@ class CreatorController extends Controller
     {
         $rules = array (
             'CreatorName' => 'bail||required|min:3|max:150',
-            'CreatingCompany'=>'required'
+            'CreatingCompany'=>'required',
+            'Description' =>  'bail||required|min:3|max:350',
         );
 
         $validator = Validator::make($request->all(),$rules);
@@ -39,7 +40,8 @@ class CreatorController extends Controller
         } else {
             $creator = new Creator([
                 'CreatorName' => $request->get('CreatorName' ),
-                'CreatingCompany'=> $request->get( 'CreatingCompany')
+                'CreatingCompany'=> $request->get( 'CreatingCompany'),
+                'Description' => $request->get('Description'),
 
             ]);
             $creator->save();
@@ -69,6 +71,7 @@ class CreatorController extends Controller
 
         $creator->CreatorName = $request->get('CreatorName');
         $creator->CreatingCompany = $request->get('CreatingCompany');
+        $creator->Description = $request->get('Description');
         $creator->save();
         return redirect('creators')->with('success', 'Task was successful');
     }

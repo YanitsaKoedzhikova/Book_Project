@@ -41,6 +41,7 @@
                 <th>Release Date</th>
                 <th>Creator</th>
                 <th>Genre</th>
+                <th>Description</th>
             </tr>
             </thead>
             <tbody>
@@ -50,6 +51,7 @@
                     <td>{{$game->ReleaseDate}}</td>
                     <td>{{$game->Creator}}</td>
                     <td>{{$game->Genre}}</td>
+                    <th>{{$game->Descriptio}}</th>
 
                 </tr>
 
@@ -58,7 +60,7 @@
         </table>
 </div>
 @elseif(isset($message))
-    <h1 style= " text-align: center" >{{$message}}
+    <h1 style= " text-align: center" >{{$message}}</h1>
         <form action="{{action("SearchController@searchGames")}}" method="POST" role="search">
             {{ csrf_field() }}
             <div class="input-group">

@@ -17,6 +17,7 @@ class CreateCreatorsTable extends Migration
             $table->increments('id');
             $table->string('CreatorName','150');
             $table->date('CreatingCompany');
+            $table->string('Description', '350');
             $table->timestamps();
         });
     }

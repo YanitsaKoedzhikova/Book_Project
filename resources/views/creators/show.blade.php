@@ -50,6 +50,14 @@
             {{ $creator->CreatingCompany }}
         </td>
     </tr>
+    <tr>
+        <td width="20%">
+            <strong>Description:</strong>
+        </td>
+        <td>
+            {{ $creator->Description }}
+        </td>
+    </tr>
 
 </table>
 <div class="panel-body">

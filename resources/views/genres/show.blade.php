@@ -48,7 +48,7 @@
             <strong>Description:</strong>
         </td>
         <td>
-            {{ $game->Description}}
+            {{ $genre->Description}}
         </td>
     </tr>
 </table>
