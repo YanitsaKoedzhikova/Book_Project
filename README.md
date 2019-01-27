@@ -10,8 +10,9 @@ The site is about games. Here players who dont know what to play can search for 
 
 
 I. Controllers are
-    Game Controller
-    Creator Controller
+
+    Game Controller    
+    Creator Controlle
     Genre Controller
     Image Controller
     Search Controller
@@ -66,7 +67,14 @@ II.Models are:
 	    
 	    
 III.Views:
-    1.auth -password - email - reset -login -register -verify
+
+    1.auth
+       -password
+       -email
+       -reset 
+       -login 
+       -register 
+       -verify
     
     
     2.houses:    
