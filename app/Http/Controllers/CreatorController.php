@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Validator;
 class CreatorController extends Controller
 {
 
+    public function __construct()
+    {
+
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
     public function index()
     {
         $CreatorModel = new Creator();

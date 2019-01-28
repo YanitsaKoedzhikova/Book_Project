@@ -9,27 +9,6 @@
 
     <title>Laravel</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <style>
-        html, body {
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-
-
-        .links > a {
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -59,7 +38,8 @@
 </div>
 @elseif(isset($message))
     <h1 style= " text-align: center">{{$message}}</h1>
-    <form action="{{action("SearchController@searchCreators")}}" method="POST" role="search">
+    <div align="center">
+    <form  style="width: 50%" action="{{action("SearchController@searchCreators")}}" method="POST" role="search">
         {{ csrf_field() }}
         <div class="input-group">
             <input type="text" class="form-control" name="search"
@@ -70,10 +50,11 @@
         </span>
         </div>
     </form>
+    </div>
 @endif
 <div class="form-group row">
     <div class="col-xl-1"></div>
-    <a class="btn btn-primary" href="{{ route('creators.index') }}"> Back</a>
+    <a  class="btn btn-primary" href="{{ route('creators.index') }}"> Back</a>
 </div>
 </body>
 </html>

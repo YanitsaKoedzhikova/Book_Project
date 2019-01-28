@@ -15,13 +15,13 @@
                             <div class="alert alert-info">{{\Session::get('success') }}</div>
                         @endif
 
-                        <table class="table table-bordered table-hover">
+                        <table style="width: 90%"  align="center" class="table table-bordered table-hover">
                             <thead>
                             <tr>
 
                                 <td >Name</td>
                                 <td>Image</td>
-                                <th colspan="4">Actions</th>
+                                <th>Actions</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -29,7 +29,7 @@
                                 <tr>
 
                                     <td>{{ $value->imageDescription }}</td>
-                                    <td><img src="<?php echo asset('storage/sample-image/' . $value->fileName);?>" alt="image" /></td>
+                                    <td><img style="width: 800px; height: 400px" src="<?php echo asset('storage/sample-image/' . $value->fileName);?>" alt="image" /></td>
 
                                     @if (Auth::check())
                                     <td>

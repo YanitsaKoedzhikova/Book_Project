@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Validator;
 
 class GenreController extends Controller
 {
+    public function __construct()
+    {
+
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
     public function index()
     {
         $GenreModel = new Genre();
